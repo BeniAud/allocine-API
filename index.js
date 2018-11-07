@@ -24,7 +24,7 @@ app.get("/api/search", function(req, res) {
 
   axios
     .get(
-      "https://api.themoviedb.org/3/search/movie?api_key=f9f6e52a9fd032c495c933c669ad2b4c&query=" +
+      "https://api.themoviedb.org/3/search/movie?api_key=f9f6e52a9fd032c495c933c669ad2b4c&language=fr-FR&query=" +
         req.query.q +
         ""
     )
@@ -59,6 +59,9 @@ app.get("/api/movies/:type", function(req, res) {
       console.log(error);
     });
 });
+//--------------------------Création d'une liste de films favoris--------------------------//
+
+//Requête POST : /api/lists/add
 
 //-------------------------------------Création d'un compte utilisateur--------------------//
 //Requête POST : /api/sign_up
